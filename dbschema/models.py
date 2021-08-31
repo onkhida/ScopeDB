@@ -69,7 +69,7 @@ class DatasetFile(models.Model):
         return 'File in {}'.format(self.dataset.name)
 
     def get_absolute_url(self):
-        return reverse('download', args=[self.file.url])
+        return reverse('show-file', args=[self.id])
 
     # basically this dataset file is tied to a specific dataset
 

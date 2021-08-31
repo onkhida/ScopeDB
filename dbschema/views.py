@@ -4,9 +4,9 @@ from .models import (
     Dataset,
     DatasetFile
 )
-import os
-from django.conf import settings
-from django.http import HttpResponse, Http404
+import csv
+from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
 def project_list(request):
@@ -27,11 +27,21 @@ def project_detail(request, id):
 
     return render(request, 'dbschema/project-detail.html', context)
 
-def show_file(request, id):
-    file = get_object_or_404(DatasetFile, id=id)
+# still working on how to display csv files
+# def show_file(request, id):
+#     response = HttpResponse(
+#         content_type='text/csv',
+#         headers={'Content-Disposition': 'attachment; filename="somefilename.csv"'},
+#     )
+#
+#     file = get_object_or_404(DatasetFile, id=id)
+#     file_path = file.file.path
+#
+#     csv_data = csv.reader(file_path, delimiter=',')
+#     t = loader.get_template('dbschema/showfile.txt')
+#     c = {'data': csv_data}
+#
+#     response.write(t.render(c))
+#
+#     return c
 
-    context = {
-        'file': file,
-    }
-
-    return render(request, 'dbschema/')
