@@ -1,0 +1,9 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <h5>Please log in to your account</h5>
+        <br>
+        <a href="{% url 'login' %}">Here</a>
+    </div>
+{% endblock %}
