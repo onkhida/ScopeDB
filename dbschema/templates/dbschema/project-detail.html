@@ -62,7 +62,7 @@
             <td class="px-4 py-3 text-sm border">{{ data.created}}</td>
           <td>
           {% for file in data.files.all %}
-              <a href="{{ file.get_absolute_url }}">
+              <a href="#">
                   File {{ forloop.counter }}
               </a>
           {% endfor %}
