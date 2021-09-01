@@ -1,0 +1,36 @@
+{% extends 'dbschema/base.html' %}
+
+{% block content %}
+    <section class="w-full m-auto items-center">
+      <div class="m-14 leading-loose">
+        <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
+          <h1 style="font-size: 25px!important;" class="mb-7 text-gray-800 font-large"><b>Create a project</b></h1>
+          <div class="">
+            <label class="block text-sm text-gray-00" for="cus_name">Name</label>
+            <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Project Name" aria-label="Name">
+          </div>
+          <div class="mt-2">
+            <label class="block text-sm text-gray-600" for="cus_email">Description</label>
+            <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Project Description" aria-label="Email">
+          </div>
+          <div class="mt-2">
+            <label class=" block text-sm text-gray-600" for="cus_email">Institute</label>
+            <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="cus_email" type="text" required="" placeholder="Project Institute" aria-label="Email">
+          </div>
+          <div class="">
+            <label class="block text-sm text-gray-600" for="cus_name">URL</label>
+            <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="text" required="" placeholder="Project URL" aria-label="Name">
+          </div>
+
+          <div class="">
+            <label class="block text-sm text-gray-600" for="cus_name">Samples</label>
+            <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="cus_name" type="number" required="" placeholder="Number of Samples" aria-label="Name">
+          </div>
+          <div class="mt-4">
+            <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit"><b>Create</b></button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+{% endblock %}

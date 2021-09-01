@@ -45,3 +45,5 @@ def project_detail(request, id):
 #
 #     return c
 
+
+
